@@ -174,7 +174,7 @@
     </style>
     <script src="jquery-1.11.3.min.js"></script>
 </head>
-<body onresize="resizeChange()">
+<body>
 <div class="container">
     <ul>
         <li><a  data-id="1" href="javascript:;" class="select-text">Linux</a></li>
@@ -326,16 +326,7 @@
         };
         select.init();
 
-        function resizeChange(){
-            alert('dddd');
-            var wid=window.innerWidth;
-            var circle=document.getElementsByClassName('td-circle');
-            if(wid<500){
-                circle.style.left='37px';
-            }else{
-                circle.style.left='8%';
-            }
-        }
+     
 
     };
     $(function(){
