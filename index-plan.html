@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body{
+            margin: 0;
+            padding:0;
+            max-width: 1080px;
+            min-width: 350px;
+            width: 100%;
+            min-height: 700px;
+            overflow-y:visible;
+            overflow-x:visible;
+            font: normal 100%/1.5  "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+
+        }
+        div,ul,li p{
+            margin: 0;
+            padding:0;
+            display: block;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .container{
+            min-width: 350px;
+            margin:0 0 100px 0;
+
+        }
+        .container ul{
+            margin:5% 0;
+            text-align: center;
+            width:98%;
+            padding-bottom: 3%;
+            border-bottom: 1px solid #9b9b9b;
+
+        }
+        .container ul li{
+            display: inline;
+            min-width: 150px;
+            padding:2% 3%;
+            padding-bottom: 1%;
+            border-right: 2px solid #bbb5b7;
+        }
+        .container ul li:nth-child(3){
+            border-right: none;
+        }
+        .container ul li a{
+            font-size: 130%;
+            padding:1%  5%;
+            color: #bbb5b7;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+        }
+        .container ul li .select-text{
+            color: #FFFFFF;
+            background-color: #65eecb;
+        }
+        .content{
+            width:98%;
+            height: 100%;
+            margin: 1% 1%;
+            display:none;
+        }
+        .content-block{
+            display: block;
+        }
+         .con-circle-border{
+             height: 30%;
+             min-height: 150px;
+             width: 100%;
+             padding:10px 0 7px 0;
+             margin-top:-10px;
+             background-color: #f2f2f2;
+         }
+        .con-circle-border .con-circle{
+            width: 130px;
+            height: 130px;
+            background-color: #fafafa;
+            border:7px solid #47facd;
+            border-radius: 130px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .con-circle-border .con-circle p:nth-child(1){
+            margin: 25px 0 0 0 ;
+            color:#7b7b7b;
+            font-size: 110%;
+        }
+        .con-circle-border .con-circle p:nth-child(2){
+             color:#cd1800;
+             margin: -8px 0 0 0 ;
+             padding:0;
+             font-size: 250%;
+             font-weight:700;
+         }
+        .con-list{
+            width:100%;
+            height: 60%;
+            background-color: #ffffff;
+            margin: 5% 0;
+        }
+        .con-list table tr{
+            width: 100%;
+            height: 30px;
+            margin: 0;
+            padding:0;
+        }
+        .con-list table tr td{
+            margin: 0;
+            padding:0;
+            /*cursor: pointer;*/
+            /*border: 1px solid #bbb5b7;*/
+        }
+        .td-line{
+            display: block;
+            position: relative;
+            top:2px;
+            left:80%;
+            width:2px;
+            height: 50px;
+            background-color: #03ce87;
+        }
+        .con-list table tr td p{
+            color: #6c6c6c;
+            font-size: 140%;
+            padding:5px 2%  ;
+            margin: 0;
+          }
+        #td-loading{
+            color: #e0e700;
+        }
+        .con-list table tr td:nth-child(3) img{
+            padding:0  5%;
+            padding-top:7px;
+            display: none;
+            width:50%;
+            height: auto;
+            margin: 0;
+        }
+        .nav-fixed ul{
+            width:98%;
+            text-align: center;
+        }
+        .nav-fixed ul li{
+            float: left;
+            margin: 0  1%;
+            width:30%;
+            min-height: 80px;
+            max-height: 200px;
+
+        }
+        .nav-fixed ul li img{
+            width:20%;
+            height: auto;
+            margin: 2px 0 -8px 0;
+
+        }
+        .nav-fixed ul li p{
+            position: relative;
+            text-align: center;
+            margin: 1px 0;
+            font-size: 100%;
+            color: #5a5a5b;
+        }
+        .nav-fixed ul li:nth-child(2) p{
+            color: #4bc78e;
+        }
+    </style>
+    <script src="jquery-1.11.3.min.js"></script>
+</head>
+<body onresize="resizeChange()">
+<div class="container">
+    <ul>
+        <li><a  data-id="1" href="javascript:;" class="select-text">Linux</a></li>
+        <li><a  data-id="2" href="javascript:;">嵌入式</a></li>
+        <li><a  data-id="3" href="javascript:;">项目</a></li>
+    </ul>
+    <div class="main-con">
+        <div class="content content-block">
+                 <div class="con-circle-border">
+                     <div class="con-circle">
+                         <p>课程已完成：</p>
+                         <p>80%</p>
+                     </div>
+                 </div>
+            <div class="con-list">
+                <table  width="100%" cellspacing="0" id="list-table">
+                    <tr id="1">
+                    <td width="10%">
+                        <span class="td-line"></span><span class="td-circle" style="  display: block;
+                              position:absolute;
+                              top:50%;
+                              left:8%;
+                              width:12px;
+                              height:12px;
+                              border-radius:12px;
+                              background-color: #03ce87;
+                              z-index: 150;
+                              margin-top: 13%;
+                              ">
+
+                        </span>
+                    </td>
+                    <td width="80%">
+                        <p>课程1：Linxu入门介绍</p>
+                    </td>
+                    <td><img src="chose.png"></td>
+                </tr>
+                    <tr id="2">
+                        <td width="10%">
+                            <span class="td-line"></span><span class="td-circle" style="  display: block;
+                              position:absolute;
+                              top:60%;
+                               left:8%;
+                              width:12px;
+                              height:12px;
+                              border-radius:12px;
+                              background-color: #03ce87;
+                              z-index: 150;
+                              margin-top: 13%;">
+
+                        </span>
+                        </td>
+                        <td width="80%">
+                            <p>课程1：Linxu入门介绍</p>
+                        </td>
+                        <td><img src="chose.png"></td>
+                    </tr>
+                    <tr id="3">
+                        <td width="10%">
+                            <span class="td-line"></span><span class="td-circle" style="
+                            display: block;
+                              position:absolute;
+                              top:70%;
+                              left:8%;
+                              width:12px;
+                              height:12px;
+                              border-radius:12px;
+                              background-color: #03ce87;
+                              z-index: 150;
+                              margin-top: 13%;">
+
+                        </span>
+                        </td>
+                        <td width="80%">
+                            <p>课程1：Linxu入门介绍</p>
+                        </td>
+                        <td><img src="chose.png"></td>
+                    </tr>
+                    <tr id="4">
+                        <td width="10%">
+                            <span class="td-line"></span>
+                            <span class="td-circle" style="
+                             display: block;
+                              position:absolute;
+                              top:80%;
+                              left:8%;
+                              width:12px;
+                              height:12px;
+                              border-radius:12px;
+                              background-color: #03ce87;
+                              z-index: 150;
+                              margin-top: 13%;">
+                        </span>
+                        </td>
+                        <td width="80%">
+                            <p>课程1：Linxu入门介绍</p>
+                        </td>
+                        <td><img src="loading.png"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="content">
+
+        </div>
+        <div class="content">
+
+        </div>
+    </div>
+</div>
+
+<nav class="nav-fixed">
+    <ul>
+        <li><a href="#index"><img src="nav/find.png"><p>发现</p></a></li>
+        <li><a href="#index-plan"><img src="nav/planed.png"><p>计划</p></a></li>
+        <li><a href="#inder-person"><img src="nav/person.png"><p>个人</p></a></li>
+    </ul>
+</nav>
+<script>
+    window.onload=function(){
+        function $$(selector){
+            return document.querySelector(selector);
+        }function $$$(selector){
+            return document.querySelectorAll(selector);
+        }
+        var select={
+            //函数名：function（）{} 最后在调用函数。
+            init: function(){
+                //函数$获取ul单个元素， 函数$$获取多个相同的a元素
+                var ul = $$('.container ul'), list = $$$(".container ul  a"), i;
+
+                //定义点击ul区域时发生的时间，e为事件，src为事件源 把list[]中的所有a的class=select-text移除，在当前事件源添加class
+                ul.onclick=function(evt){
+                    var e= evt||window.event;
+                    var src = e.srcElement || e.target;
+                    var i, len, j, leng;
+                    for(i=0, len=list.length; i<len; i++){
+                        list[i].classList.remove('select-text');
+                    }
+                    src.classList.add('select-text');
+                    var index = src.getAttribute('data-id'), box = $$$('.content');
+                    for(j=0, leng=box.length; j<leng; j++){
+                        box[j].style.display = 'none';
+                    }
+                    box[index-1].style.display = 'block';
+
+                }
+            }
+        };
+        select.init();
+
+        function resizeChange(){
+            alert('dddd');
+            var wid=window.innerWidth;
+            var circle=document.getElementsByClassName('td-circle');
+            if(wid<500){
+                circle.style.left='37px';
+            }else{
+                circle.style.left='8%';
+            }
+        }
+
+    };
+    $(function(){
+//            var winWidth=window.innerWidth;
+////           alert(winWidth);
+//            $(window).resize(function(){
+////                alert(winWidth);
+//                if(winWidth<=510){
+//                    $(".td-circle").css("left","37px");
+//                }else{
+//                    $(".td-circle").css("left","8%");
+//                }
+//            })
+        $('.con-list table tr').click(function(){
+//               alert(this.id);
+//               $(this).children('.con-list table tr td:eq(2) img').src='loading.png';
+            $(this).find('p').css('color','#e0e700');
+            $(this).find('img').css('display','block');
+            $(this).find('img').src='loading.png';
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>首页</title>
+    <style>
+        html,body{
+            max-width: 1080px;
+            min-width: 300px;
+            width: 100%;
+            min-height: 800px;
+        }
+        body{
+             overflow-y:visible;
+             overflow-x:visible;
+             font: normal 100%/1.5 "Hiragino Sans GB","Microsoft YaHei",  "WenQuanYi Micro Hei", sans-serif;
+        }
+        div,ul,li{
+             margin: 0;
+             padding:0;
+             display: block;
+         }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+       .container{
+           min-width: 300px;
+           margin:0 2% ;
+           margin-top: 1%;
+           margin-bottom: 100px;
+       }
+        .container ul{
+            margin:5% 0;
+            text-align: center;
+            width:98%;
+            padding-bottom: 3%;
+            border-bottom: 1px solid #9b9b9b;
+
+        }
+       .container ul li{
+           display: inline;
+           min-width: 140px;
+           padding:2% 3%;
+           padding-bottom: 1%;
+           border-right: 2px solid #bbb5b7;
+       }
+        .container ul li:nth-child(3){
+            border-right: none;
+        }
+        .container ul li a{
+            font-size: 130%;
+            padding:1%  4%;
+            color: #bbb5b7;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+        }
+        .container ul li .select-text{
+            color: #FFFFFF;
+            background-color: #65eecb;
+        }
+        .content{
+            width:98%;
+            height: 100%;
+            margin: 2% 1%;
+            display:none;
+        }
+        .content-block{
+            display: block;
+        }
+        .box-bg{
+            position:relative;
+            margin: 10px 0;
+            width: 98%;
+            height: auto;
+            min-height: 160px;
+            background-color: #e6fef9;
+        /*//自适应关键*/
+            overflow: hidden;
+        }
+        .box-bg span:nth-child(1) {
+            display: block;
+            position: relative;
+            float: left;
+            width: 40%;
+            height: auto;
+            min-height: 100px;
+            margin:10px 4%  10px 1%;
+
+        }
+        .box-bg span:nth-child(2) {
+            display: block;
+            min-height: 160px;
+            float: left;
+            width: 50%;
+            height: auto;
+        }
+        .box-bg span img{
+            width: 93%;
+            padding: 0;
+            margin: 3%;
+            height: auto;
+            min-height: 150px;
+            max-height: 170px;
+
+        }
+        .box-bg span h3 {
+            overflow: hidden;
+            font-size: 170%;
+            margin: 3% 0 1% 0;
+            color:#06692a;
+            max-height: 40px;
+            font-weight:500;
+        }
+        .box-bg span p{
+            max-height: 60px;
+            min-height: 60px;
+            overflow: hidden;
+            margin: 1% 0 5% 0;
+            padding: 0;
+            font-size:120%;
+            color:#bbb5b7;
+            font-weight: normal;
+        }
+        .box-bg span h6{
+            float: right;
+            margin: 0 5%;
+            padding: 0;
+            font-size: 100%;
+            font-weight: lighter;
+            color: #bbb5b7;
+        }
+        .nav-fixed{
+            width: 100%;
+            background-color: #e2f7ed;
+            border-top: 1px solid #bbb5b7;
+            position: fixed;
+            bottom: 0;
+
+        }
+        .nav-fixed ul{
+             width:98%;
+             text-align: center;
+        }
+        .nav-fixed ul li{
+            float: left;
+            margin: 0  1%;
+            width:30%;
+            min-height: 80px;
+            max-height: 200px;
+
+        }
+        .nav-fixed ul li img{
+            width:20%;
+            height: auto;
+            margin: 2px 0 -8px 0;
+           
+        }
+        .nav-fixed ul li p{
+            position: relative;
+            text-align: center;
+            margin: 1px 0;
+            font-size: 100%;
+            color: #5a5a5b;
+        }
+        .nav-fixed ul li:nth-child(1) p{
+            color: #4bc78e;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <ul>
+        <li><a  data-id="1" href="javascript:;" class="select-text">Linux</a></li>
+        <li><a  data-id="2" href="javascript:;">嵌入式</a></li>
+        <li><a  data-id="3" href="javascript:;">项目</a></li>
+    </ul>
+    <div class="main-con">
+        <div class="content content-block">
+           <div class="box-bg">
+                  <a href="javascript:;">
+                      <span><img src="首页图片/pro-pic1.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+            </a>
+       </div>
+            <div class="box-bg">
+        <a href="javascript:;">
+            <span><img src="首页图片/pro-pic2.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+        </a>
+    </div>
+            <div class="box-bg">
+            <a href="javascript:;">
+                <span><img src="首页图片/pro-pic3.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+            </a>
+        </div>
+            <div class="box-bg">
+                <a href="javascript:;">
+                    <span><img src="首页图片/pro-pic4.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+                </a>
+            </div>
+    </div>
+        <div class="content">
+            <div class="box-bg">
+                <a href="javascript:;">
+                    <span><img src="首页图片/pro-pic2.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+                </a>
+            </div>
+            <div class="box-bg">
+                <a href="javascript:;">
+                    <span><img src="首页图片/pro-pic3.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+                </a>
+            </div>
+            <div class="box-bg">
+                <a href="javascript:;">
+                    <span><img src="首页图片/pro-pic4.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+                </a>
+            </div>
+            <div class="box-bg">
+                <a href="javascript:;">
+                    <span><img src="首页图片/pro-pic1.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="box-bg">
+                <a href="javascript:;">
+                    <span><img src="首页图片/pro-pic3.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+                </a>
+            </div>
+            <div class="box-bg">
+                <a href="javascript:;">
+                    <span><img src="首页图片/pro-pic2.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+                </a>
+            </div>
+            <div class="box-bg">
+                <a href="javascript:;">
+                    <span><img src="首页图片/pro-pic1.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+                </a>
+            </div>
+            <div class="box-bg">
+                <a href="javascript:;">
+                    <span><img src="首页图片/pro-pic4.png"></span>
+               <span>
+                   <h3>Linux入门介绍</h3>
+                   <p>Linux入门介绍Linux入门介绍Linux入门介绍Linux入门介绍</p>
+                   <h6>时间：01:25  难度：初级</h6>
+               </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav class="nav-fixed">
+        <ul>
+            <li><a href="#index"><img src="nav/found.png"><p>发现</p></a></li>
+            <li><a href="#index-plan"><img src="nav/plan.png"><p>计划</p></a></li>
+            <li><a href="#inder-person"><img src="nav/person.png"><p>个人</p></a></li>
+        </ul>
+    </nav>
+
+
+<script>
+    window.onload=function(){
+        function $(selector){
+            return document.querySelector(selector);
+        }function $$(selector){
+            return document.querySelectorAll(selector);
+        }
+        var select={
+            //函数名：function（）{} 最后在调用函数。
+            init: function(){
+                //函数$获取ul单个元素， 函数$$获取多个相同的a元素
+                var ul = $('.container ul'), list = $$(".container ul  a"), i;
+
+                //定义点击ul区域时发生的时间，e为事件，src为事件源 把list[]中的所有a的class=select-text移除，在当前事件源添加class
+                ul.onclick=function(evt){
+                    var e= evt||window.event;
+                    var src = e.srcElement || e.target;
+                    var i, len, j, leng;
+                    for(i=0, len=list.length; i<len; i++){
+                        list[i].classList.remove('select-text');
+                    }
+                    src.classList.add('select-text');
+                    var index = src.getAttribute('data-id'), box = $$('.content');
+                    for(j=0, leng=box.length; j<leng; j++){
+                        box[j].style.display = 'none';
+                    }
+                    box[index-1].style.display = 'block';
+
+                }
+            }
+        };
+        select.init();
+    }
+</script>
+</body>
+</html>
